@@ -1,186 +1,150 @@
-# A friendly guide to Luke's i3 rice
+# Um guia amigável para meu ambiente de trabalho
 
-Use vim keys (h/j/k/l) to navigate this document. Pressing W will fit it to window width. + and - zoom in and out. f to toggle fullscreen. q to quit, i for Night Mode. (These are general mupdf shortcuts.)
+Use os atalhos do vim (h/j/k/l) para navegar por este documento. Apertar W fará ele ajustar para o tamanho da janela. + e - são o zoom. f para o modo tela cheia. q para sair, i para modo noturno. (estes são os atalhos do mupdf)
 
-+ Mod+F1 will show this document at any time.
-+ By "Mod" I mean the Super Key, usually known as "the Windows Key."
++ Mod+F1 irá abrir este documento a qualquer momento
++ Por "Mod" quero dizer a tecla Super, também conhecida como "A tecla do windows", ao lado do alt direito
 
-Questions or suggestions? Email me at [luke@lukesmith.xyz](mailto:luke@lukesmith.xyz).
+Perguntas ou sugestões? Envie um e-mail! [timoteohss@gmail.com](mailto:timoteohss@gmail.com).
 
-## Basic goals and principles of my rice:
+## Metas e princípios desse ambiente:
 
-+ Naturalness -- I want the number of keypresses I have to make to get what I want to be as little as possible.
-+ Economy -- All the basic programs I use should be simple and light on system resources. Because of this, many are terminal or ncurses programs.
-+ Keyboard/vim-centrality -- All my terminal apps (and other programs) use vim keys when possible. My hands never need leave the home row or thereabout.
-+ Lots of color -- Many rices stick to one general color palatte. I like my system to be very vibrant. If you disagree, you can easily change it.
++ **Velocidade** -- Eu quero o número de teclas apertadas para obter o que eu quiser ser o menor possível. Sou preguiçoso.
++ **Economia** -- Todos os programas básicos que uso devem ser leves e simples. Por causa disso, utilizo vários programas baseados no terminal
++ **Centrado no Vim** -- Todos os meus programas de terminal utilizam os atalhos do vim quando possíveis. Minhas mãos não precisam sair do centro do teclado.
++ **Muitas cores** -- Eu gosto do sistema com cores vibrantes. Se você não, pode facilmente mudar isto. 
 
-## General changes
+## Mudanças gerais
 
-+ Capslock is now an alternative escape. Makes vim-craft much more efficient.
-+ The menu button (usually between the right Alt and Ctrl) is an alternative Super/Mod button. This is to make one-handing on my laptops easier.
-+ The rice also uses the US International keyboard by default. This allows you to type a lot of characters in many different European languages.
++ Capslock agora é um alternativo para o ESC. Facilitando minha vida no vim.
++ O botão de menu é utilizado como Super/Mod. Isso facilita a realização de tarefas no notebook.
++ O padrão ABNT2 é configurado por padrão, pode ser facilmente mudado.
 
-# The Polybar Status Bar
+# A barra de status Polybar
 
-If you're new to i3, notice the status bar on the top of the screen. This is Polybar. To the left side, you'll see the numbers of your current workspace(s). If you have a song playing in mpd, its name will appear to the left as well. On the right side, you'll see various system status notifiers, date, CPU tempurature, remaining hard drive space, etc. I'm sure you can figure it out. Several modules will be click-sensitive, although if you're using my system as indended, you probably won't be doing much clicking.
+Se você não é familiarizado com o i3, a barra de status no topo da da tela é chamada de polybar. Para a esquerda, você verá números da sua Área de trabalho atual. Se você tiver alguma música tocando, seu nome aparecerá na esquerda também. Do lado direito, você verá várias informações do sistema, como data, temperatura da CPU, espaço em disco disponível, etc. Estou certo que poderá descobrir isso sozinho. Muitos módulos podem ser clicados, apesar de que se você estiver utilizando este ambiente da forma que imaginei, não clicará em muitas coisas.
 
-# Shortcut keys
+# Teclas de atalhos
 
-## Window basics
+## Básicos das janelas
 
-Notice the case sensitivity of the shortcuts.
+Note que os atalhos diferenciam teclas maiúsculas e minusculas.
 
-Be sure you play around with these. Be flexible with the basic commands and the rice will grow on you quick.
+Brinque com esses atalhos. Seja flexível com comandos básicos e você logo se acostumará com eles
 
-+ Mod+Enter -- Spawn terminal
-+ Mod+q or Q -- Close window
-+ Mod+d -- rofi (For running commands or programs without shortcuts)
-+ Mod+t -- Toggle between spawning vertically and horizontally
-+ Mod+f or F11 -- Fullscreen
-+ Mod+h/j/k/l -- Move to different windows
-+ Mod+H/J/K/L -- Move a window around
-+ Mod+Y/U/I/O -- Resize windows
-+ Mod+/ -- Spawn vertical terminal
-+ Mod+' -- Spawn horizonal terminal
-+ Mod+s/S -- Increase/decrease inner gaps
-+ Mod+z/Z -- Increase/decrease outer gaps
-+ Mod+D -- Reduce gaps to 0 pixels
-+ Mod+T -- Restore gaps to default (15 pixels)
-+ Mod+Shift+Space -- Make a window float (you can still resize and move floating windows with the same keys above)
-+ Mod+Space -- Switch from a floating window to a non-floating one (or vice versa)
++ **Mod+Enter** -- Abrir um terminal
++ **Mod+q ou Q** -- Fechar a janela atual 
++ **Mod+d** -- rofi (Para abrir programas sem atalhos)
++ **Mod+t** -- Mudar a orientação das janelas abertas
++ **Mod+f ou F11** -- Janela cheia
++ **Mod+h/j/k/l** -- Mudar para diferentes janelas
++ **Mod+H/J/K/L** -- Mover uma janela
++ **Mod+Y/U/I/O** -- Mudar o tamanho de uma janela
++ **Mod+/** -- Abrir um terminal na vertical
++ **Mod+'** -- Abrir um terminal na horizontal
++ **Mod+s/S** -- Aumentar/Diminuir o espaço interno das janela
++ **Mod+z/Z** -- Aumentar/Diminuir o espaço externo entre janelas
++ **Mod+D** -- Acaba com o espaço entre janelas
++ **Mod+T** -- Volta o espaço entre janelas para o padrão de 15 pixeis
++ **Mod+Shift+Espaço** -- Faz a janela flutuar (você ainda pode mudar o tamanho e mover a janela com os atalhos acima)
++ **Mod+Espaço** -- Muda entre o modo flutuante e o modo fixo
 
-## Basic Programs
+## Programas básicos
 
-+ Mod+r -- ranger (file browser/manager)
-+ Mod+e -- mutt (email)
-+ Mod+m -- ncmpcpp (music player)
-+ Mod+a -- R calculator (close with Mod+a for reusability)
-+ Mod+i -- htop (system info)
-+ Mod+N -- newsbeuter (RSS feed reader)
-+ Mod+y -- calcurse (calendar and schedule)
-+ Mod+u -- "Dropdown" terminal (close with Mod+u for reusability)
-+ Mod+Shift+Enter -- new tmux window
++ **Mod+r** -- ranger (Visualizador de arquivos)
++ **Mod+a** -- Calculadora (Feche com Mod+a para salvar variáveis)
++ **Mod+i** -- htop (Informações do sistema)
++ **Mod+y** -- Agenda
++ **Mod+u** -- Terminal flutuante
++ **Mod+Shift+Enter** -- Nova janela do tmux
 
-## Larger programs
+## Programas maiores
 
-+ Mod+A -- Pavucontrol (audio system control)
-+ Mod+W -- Firefox
-+ Mod+B -- Blender
-+ Mod+G -- GIMP
-+ Mod+P -- MyPaint
++ **Mod+A** -- Pavucontrol (Sistema para controle de áudio)
++ **Mod+W** -- Firefox
++ **Mod+B** -- Blender
++ **Mod+G** -- GIMP
++ **Mod+P** -- MyPaint
 
-## System
+## Sistema
 
-+ Mod+R -- Restart/refresh i3 (renews configs, does not close any programs)
-+ Mod+x -- i3lock (Enter password to return)
-+ Mod+X -- shutdown now (Be careful with this one!)*
-+ Mod+Shift+Backspace -- reboot (And this one!)
-+ Mod+Shift+Escape -- exit i3 (And this one as well!)
-+ Mod+F1 -- Shows this document
-+ Mod+F2 -- Recreate dynamic config files (see below)
-+ Mod+F3 -- arandr (For adding screens/HDMI/VGA connections)
-+ Mod+F4 -- Hibernate
-+ Mod+F5 -- Reset Network Manager*
-+ Mod+F7 -- Increase window transparency
-+ Mod+F8 -- Decrease window transparency
-+ Mod+F10 -- Switch to laptop screen
-+ Mod+F11 -- Switch to VGA display (if available)
-+ Mod+F12 -- Switch to dual VGA/laptop display (if available)
++ **Mod+R** -- Reiniciar/Atualizar i3 (Atualiza configurações, não fecha nenhuma janela)
++ **Mod+x** -- Travar o computador (Entre com a senha para destravar o computador)
++ **Mod+X** -- Desligar (Tenha cuidado, desliga imediatamente)
++ **Mod+Shift+Backspace** -- Reiniciar (E com esse!)
++ **Mod+Shift+Escape** -- Sair do i3 (E ESSE!)
++ **Mod+F1** -- Mostra esse documento
++ **Mod+F2** -- Recria arquivos de atalhos (Mais informações abaixo)
++ **Mod+F3** -- arandr (Multi monitor)
++ **Mod+F4** -- Adormece o computador
++ **Mod+F5** -- Reinicia o Network Manager
++ **Mod+F7** -- Aumenta transparência da janela
++ **Mod+F8** -- Diminui transparência da janela
++ **Mod+F10** -- Muda para a tela do notebook
++ **Mod+F11** -- Muda para o VGA
++ **Mod+F12** -- Muda para notebook/VGA se disponível
 
-## Audio
+## Áudio
 
-I use ncmpcpp as a music player, which is a front end for mpd. If you prefer cmus or mocp, I have commented out shortcuts you can activate for it instead in the i3 config.
+Eu uso spotify como meu player principal, mas você pode configurar o que você quiser, utilizo do pamixer para ajustar o volume, mudar a música ou controlar o play/pause.
 
-+ Mod+m -- ncmpcpp music player
-+ Mod+. -- Next track
-+ Mod+, -- Previous track
-+ Mod+< -- Restart track
-+ Mod+p -- Pause
-+ Mod+M -- Mute all audio
-+ Mod+v -- visualizer
-+ Mod+- -- Decrease volume (holding shift increases amount)
-+ Mod++ -- Increase volume (holding shift increases amount)
-+ Mod+[ -- Back 10 seconds (holding shift increases amount)
-+ Mod+] -- Forward 10 seconds (holding shift increases amount)
-+ Mod+A -- Pavucontrol (volume control)
++ **Mod+.** -- Próxima música
++ **Mod+,** -- Música anterior
++ **Mod+<** -- Reiniciar música
++ **Mod+p** -- Pausar
++ **Mod+M** -- Mutar todo audio
++ **Mod+v** -- Visualizador	
++ **Mod**+- -- Diminuir volume (Segurar shift aumenta o intervalo)
++ **Mod++** -- Aumentar volume (Segurar shift aumenta o intervalo)
++ **Mod+[** -- Voltar 10 segundos (Segurar shift aumenta o intervalo)
++ **Mod+]** -- Adiantar 10 segundos (Segurar shift aumenta o intervalo)
++ **Mod+A** -- Pavucontrol (Controle de volume)
 
-## Workspaces
+## Áreas de trabalho
 
-There are ten workspaces. They work just like those in vanilla i3 with some additions.
+Existem dez áreas de trabalho.
 
-+ Mod+(Number) -- Go to that number workspace
-+ Mod+Shift+(Number) -- Send window to that workspace
-+ Mod+Tab -- Go to previous workspace
-+ Mod+g or escape -- Go to left workspace
-+ Mod+; -- Go to right workspace
-+ Mod+Shift+Delete -- "Porno Emergency!" Press this key sequence if you want to hide what you have on your screen. Moves to a totally new workspace, mutes sound, pauses music and brings up distraction windows.
++ **Mod+(Número)** -- Ir para área de trabalho do número dado
++ **Mod+Shift+(Número)** -- Envia janela para área de trabalho do número dado
++ **Mod+Tab** -- Ir para área de trabalho anterior
++ **Mod+g ou ESC** -- Ir para a Área de trabalho da esquerda
++ **Mod+;** -- Ir para a Área de trabalho da direita
 
-## Recording
+## Outros botões
 
-I use scrot and ffmpeg to make different recordings of the desktop and audio. All of these recording shortcuts will output into `~`, and will not overwrite previous recordings.
+Eu mapeei alguns botões do teclado (botões de mídia, email, etc.) para suas funções originais.
 
-+ Print Screen -- Take a scrot screenshot
-+ Shift+Print Screen -- Take a scrot screenshot of only selected window
-+ Mod+Insert -- Begin screencast. 
-+ Mod+ScrollLock -- Begin audio recording.
-+ Mod+Pause -- Begin screen recording without audio.
-+ Mod+Print Screen -- Start screenkey
-+ Mod+Delete -- kills ffmpeg, thus ending recordings and screen
-+ ThinkVantage button (on Thinkpads) -- kills ffmpeg, thus ending recordings
+# Especialidades deste ambiente
 
-Each of the recording scripts are located in `~/.config/Scripts/`. You can check them out or modify them if needed.
+## Acesso rápido as configurações
 
-## Other buttons
+Abra o terminal e escreva `cfc`. Isso irá abrir um arquivo onde você poderá customizar pares de atalhos e arquivos de configuração. Entre com qualquer um desdes atalhos no terminal ou ranger para imediatamente abrir este arquivo no vim.
 
-I've mapped those extra buttons that some keyboards have (play and pause buttons, email, webbrowsing buttons, etc.) to what you would expect.
+Você pode adicionar novas entradas e elas serão automaticamente geradas quando você reiniciar o i3 (Mod+R) ou simplesmente apertar F2.
 
-# Special traits of my rice
+## Atalhos de pastas
 
-## Easy config access
+Abra o terminal e digite `cff`. Isso irá abrir um arquivo onde você poderá customizar pares de atalhos e pastas. Ainda não sei como será sua estrutura de pastas, mas você pode começar a construir a partir daqui.
 
-Open a terminal and type `cfc`. This will open a file where you will see customizable pairs of key shortcuts and config files. Enter any of these shortcuts in bash or ranger to immediately open the file in vim.
+Cada linhas tem um atalho de chaves para seu alvo. Estes podem ser utilizados em várias aplicações. No terminal, simplesmente aperte `d`, este é o atalho para `~/Documents` e você irá abrir a pasta e automaticamente listar seu conteúdo (ls -la).
 
-You may add new entries here and they will be refreshed when you refresh i3 (Mod+R) or simply press Mod+F2,
+Ranger irá funcionar de modo similar, se estiver com o ranger aberto, aperte `g` e depois o atalho da pasta que quer abrir. Você também pode apertar `t` para abrir uma aba nesta pasta. `m` mais o atalho move arquivos selecionados para a pasta, e `Y` copia eles para lá. **Se acostume com isso. Isso fará a manutentenção dos seus arquivos muito mais simples**
 
-## Folder and config shortcuts
+Por último, qutebrowser implementa estes arquivos também. Quando você ver um arquivo ou imagem que deseja baixar, aperte `;` seguido do atalho da pasta que deseja e o qutebrowser irá deixar você selecionar o arquivo com seu sistema de dicas. O arquivo será baixado para a pasta de sua escolha.
 
-Open a terminal and type `cff`. This opens a file when you can keep and create folder shortcuts. There are only a few here now, because I don't know what your folder structure is going to look like, but on my machine, I have 81 and growing.
+## Configurações dinâmicas
 
-Each line has a shortcut key/keys and its target. These can be used in serveral applications. In bash, simply press `d`, the shortcut for `~/Documents` and you will cd there (and automatically `ls -a`).
+Para manter estes diferentes atalhos em sincronia, este ambiente dinamicamente reconstrói as configurações do bash, qutebrowser e ranfer toda vez que você atualiza o i3 (Mod+r) ou cada vez que você atualiza os scripts (Mod+F2).
 
-ranger works similarly. When in ranger, just press `g` then the shortcut of the folder you want to go to. You may also press `t` plus the shortcut to open a new tab there. `m` plus the shortcut moves the selected files to the folder and `Y` copies them there. **Get good at this. It will make management of even the most complex file system easy.**
+Cada vez que o i3 inicia ou reinicia, irá rodar `~/.config/Scripts/shortcuts.py`, que irá ler todas as entradas na pasta atalhos e configurar os arquivos, depois traduzirá eles dentro das sintaxes de cada um desses programas.
 
-Lastly qutebrowser implements these shortcuts as well. When you see a file or image you want to download, press `;` followed by the folder shortcut and qutebrowser will let you select the file with its hint system. The file will then download to the directory you chose.
+Depois, pega a saída e coloca na base de configurações de cada programa (`~/.config/Scripts/bashrc`, `~/.config/qutebrowser/keys.conf.base`, `~/.config/rc.conf.base`) e coloca a saída nos locais adequados de cada programa.
 
-## Dynamically constructed configs
+## Então o que devo saber?
 
-To keep these different shortcuts in sync, my rice will dynamically reconstruct the configs to bash, qutebrowser and ranger each time you refresh i3 (Mod+R) or run the refresh configs script (Mod+F2).
+Use os arquivos em `cff` e `cfc` para adicionar/mudar atalhos. Estes atalhos irão sincronizar entre o bash, ranger e qutebrowser quando você apertar Mod+F2 para os atualizar. Caso queira fazer mudanças permeantes para seu bash/ranger/qutebroser, faça nos arquivos base de cada um, você pode acessar los com `cfb`, `cfr`, e `cfq`, respectivamente, então aperte Mod+F2 para fazer estas mudanças.
 
-Each time i3 starts or restarts, it will run `~/.config/Scripts/shortcuts.py`, which reads the entries in the folder shortcut and config shortcut files and then translate them into the approriate syntax of all three programs.
+# Explore e customize
 
-It then takes that output and appends it to base configs of each program (`~/.config/Scripts/bashrc`, `~/config/qutebrowser/keys.conf.base`, `~/.config/rc.conf.base`) and puts the output in the proper places for each program.
-
-## So what do I need to know?
-
-Use the files in `cff` and `cfc` to add/change shortcuts. These shortcuts will be synced between bash, ranger and qutebrowser when you press Mod+F2 to refresh them. If you want to make permanent changes to your bash/ranger/qutebrowser configs, make them to the base files which you can access with `cfb`, `cfr`, and `cfq`, respectively, then press Mod+F2 to make those changes active.
-
-# Explore and customize
-
-Don't like something about the rice? Change it. If you have a problem, try figuring it out yourself, but if you can't, ask on my YouTube or by my email.
-
-EDIT: July 31, 2017. All the feedback I've gotten is tremendous and I'm glad this has gotten so many people into customization!
-
-# Contact
-
-[Support the Channel!](https://patreon.com/lukesmith)
-
-[luke@lukesmith.xyz](mailto:luke@lukesmith.xyz)
-
-[http://lukesmith.xyz](http://lukesmith.xyz)
-
-[Send Me Money!](https://paypal.me/LukeMSmith)
-
-[My Github Page](https://github.com/LukeSmithxyz)
-
-[Twitter](https://twitter.com/lukesfiat)
-
+Não gostou de algo? Mude! Se você tem um problema, tente descobrir sozinho como resolver, se não conseguir, pesquise!
+Em qualquer caso, me envie um e-mail!
