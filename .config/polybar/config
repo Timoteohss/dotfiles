@@ -54,7 +54,7 @@ font-0 = mono:pixelsize=11;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = Wuncon Siji:pixelsize=11;1
 
-modules-left = i3 mpd
+modules-left = i3 music
 #modules-center = mpd
 modules-right = home filesystem volume wlan eth battery temperature date powermenu
 
@@ -98,21 +98,12 @@ label-indicator-underline = ${colors.secondary}
 type = internal/fs
 interval = 25
 
-mount-0 = /
+mount-0 = /home
 
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
-[module/home]
-type = internal/fs
-interval = 25
-
-mount-0 = /home
-
-label-mounted = %{F#0a81f5}~%{F-}: %percentage_used%%
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
 [module/bspwm]
 type = internal/bspwm
 
@@ -166,32 +157,43 @@ label-urgent = %index%
 label-urgent-background = ${module/bspwm.label-urgent-background}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
-[module/mpd]
-type = internal/mpd
-format-online = <label-song> <label-time>
-# <icon-prev> <toggle> <icon-next>
-#<toggle>
+[module/music]
+type = custom/script
+interval = 2
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-#icon-prev = <-
-#icon-stop = X
-#icon-play-prefix = #f00
-#icon-play = (Paused)
-#icon-pause = 
-#icon-next = ->
+label = %output:0:45:...%
+exec = ~/.config/polybar/mpris.sh
+click-left = playercrl previus
+click-middle = playerctl play-pause
+click-right = playerctl next
 
-;bar-progress-width = 45
-;bar-progress-indicator = |
-;bar-progress-fill = -
-;bar-progress-empty = -
 
-label-song =  %artist% - %title%
-label-song-maxlen = 70
-label-song-ellipsis = true
+;[module/mpd]
+;type = internal/mpd
+;format-online = <label-song> <label-time>
+;# <icon-prev> <toggle> <icon-next>
+;#<toggle>
+;
+;icon-prev = 
+;icon-stop = 
+;icon-play = 
+;icon-pause = 
+;icon-next = 
+;#icon-prev = <-
+;#icon-stop = X
+;#icon-play-prefix = #f00
+;#icon-play = (Paused)
+;#icon-pause = 
+;#icon-next = ->
+;
+;;bar-progress-width = 45
+;;bar-progress-indicator = |
+;;bar-progress-fill = -
+;;bar-progress-empty = -
+;
+;label-song =  %artist% - %title%
+;label-song-maxlen = 70
+;label-song-ellipsis = true
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -279,8 +281,8 @@ date = " %a, %b %d, %Y"
 ;date-alt = " %a, %b %d, %Y at %I:%M%p"
 ;date-alt = " %Y-%m-%d"
 
-time = " at %I:%M%p"
-;time-alt = %H:%M:%S
+;time = " at %I:%M%p"
+time = %H:%M:%S
 ;time-alt = %H:%M:%S
 
 format-prefix = 

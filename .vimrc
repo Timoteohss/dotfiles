@@ -10,6 +10,9 @@ set relativenumber
 vnoremap <C-c> "*y
 nnoremap <C-t> :tabnew<cr>
 
+set clipboard = unnamedplus
+
+
 """BASIC TOOLS
 "Navigating with guides
 inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l

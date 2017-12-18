@@ -11,7 +11,7 @@ gaps inner 15
 gaps outer 15
 font pango:monospace 11
 set $mod Mod4
-set $term termite
+set $term urxvt
 set $video --no-startup-id bash ~/.config/Scripts/video.sh
 set $stoprec --no-startup-id killall ffmpeg & killall screenkey
 set $flash --no-startup-id bash ~/.config/Scripts/flash_win.sh
