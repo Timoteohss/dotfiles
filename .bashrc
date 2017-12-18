@@ -7,9 +7,6 @@ export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput se
 shopt -s autocd #Allows you to cd into directory merely by typing the directory name.
 
 #Generic shortcuts:
-alias music="ncmpcpp"
-alias clock="ncmpcpp -s clock"
-alias visualizer="ncmpcpp -s visualizer"
 alias files="ranger"
 alias calender="calcurse"
 
@@ -29,29 +26,13 @@ alias nf="clear && neofetch"
 alias newnet="sudo systemctl restart NetworkManager"
 alias ref="python ~/.config/Scripts/shortcuts.py && source ~/.bashrc"
 alias bars="bash ~/.config/polybar/launch.sh"
-alias lsc="screen.sh l"
-alias vsc="screen.sh v"
-alias dsc="screen.sh d"
 alias bw="wal -i ~/.config/wall.png"
 
-#Music
-alias pause="mpc toggle"
-alias next="mpc next"
-alias prev="mpc prev"
-alias trupause="mpc pause"
-alias beg="mpc seek 0%"
-alias lilbak="mpc seek -10"
-alias lilfor="mpc seek +10"
-alias bigbak="mpc seek -120"
-alias bigfor="mpc seek +120"
 
 #Check the weather:
 weath() { curl wttr.in/$1 ;}
 #Install an AUR package manually (for Parabola to get AUR access):
 aurinstall() { curl -O https://aur.archlinux.org/cgit/aur.git/snapshot/$1.tar.gz && tar -xvf $1.tar.gz && cd $1 && makepkg --noconfirm -si && cd .. && rm -rf $1 $1.tar.gz ;}
-desksync() { rsync -avr --rsh='ssh -p443' $(realpath $1)/ $DESKIP:$(realpath $1);}
-deskget() { rsync -avr --rsh='ssh -p443' $DESKIP:$(realpath $1) $(realpath $1)/;}
-bl() { convert $@ -resize 1440x1080\> bl_$@ ;}
 CF() { cd ~/.config/$1 && ls ;}
 
 # DO NOT DELETE LMAO
