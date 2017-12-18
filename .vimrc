@@ -10,7 +10,7 @@ set relativenumber
 vnoremap <C-c> "*y
 nnoremap <C-t> :tabnew<cr>
 
-set clipboard = unnamedplus
+set clipboard=unnamedplus
 
 
 """BASIC TOOLS
