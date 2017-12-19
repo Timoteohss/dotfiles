@@ -18,6 +18,8 @@ set $flash --no-startup-id bash ~/.config/Scripts/flash_win.sh
 set $BROWSER firefox
 
 ###---Starting External Scripts---###
+##Xcompomg
+exec --no-startup-id xcompmgr
 #Torrent daemon:
 exec --no-startup-id transmission-daemon
 #Wifi applet:
