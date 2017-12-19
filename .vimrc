@@ -2,11 +2,22 @@ execute pathogen#infect()
 execute pathogen#helptags()
 set number
 set relativenumber
+set path+=**
+set wildmenu
 "set so=10
 "set hlsearch
 "let didit = 0
 "autocmd! InsertEnter * if ! didit | call feedkeys("\<C-\>\<C-o>:nohlsearch|let didit = 1\<CR>", 'n') | endif
 "autocmd! InsertLeave * let didit = 0
+
+let g:cpp_member_variable_highlight = 1
+
+"Disable arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
 vnoremap <C-c> "*y
 nnoremap <C-t> :tabnew<cr>
 
