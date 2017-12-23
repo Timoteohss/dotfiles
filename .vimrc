@@ -12,6 +12,10 @@ set wildmenu
 
 let g:cpp_member_variable_highlight = 1
 
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[2 q"
+
 "Disable arrow keys
 noremap <Up> <NOP>
 noremap <Down> <NOP>
@@ -22,7 +26,9 @@ vnoremap <C-c> "*y
 nnoremap <C-t> :tabnew<cr>
 
 set clipboard=unnamedplus
-
+set smartindent
+set listchars=tab:\|\ ,trail:~
+set list
 
 """BASIC TOOLS
 "Navigating with guides
@@ -198,6 +204,13 @@ autocmd FileType php,html inoremap ;tag <DELRN><Enter><++><Enter></DELRN><Enter>
 
 """END
 
+
+"""STARTCPP
+autocmd FileType cpp,c inoremap ,if if(){<Enter><++><Enter>}<esc>2kt)
+autocmd Filetype cpp,c inoremap ,while while(){<Enter><++><Enter>}<esc>2kt)
+autocmd Filetype cpp   inoremap ,class class {<Enter>public:<Enter>private:<Enter>}<esc>3kf{i
+"""END
+
 """.bib
 autocmd FileType bib inoremap ;a @article{<Enter><Tab>author<Space>=<Space>"<++>",<Enter><Tab>year<Space>=<Space>"<++>",<Enter><Tab>title<Space>=<Space>"<++>",<Enter><Tab>journal<Space>=<Space>"<++>",<Enter><Tab>volume<Space>=<Space>"<++>",<Enter><Tab>pages<Space>=<Space>"<++>",<Enter><Tab>}<Enter><++><Esc>8kA,<Esc>i
 autocmd FileType bib inoremap ;b @book{<Enter><Tab>author<Space>=<Space>"<++>",<Enter><Tab>year<Space>=<Space>"<++>",<Enter><Tab>title<Space>=<Space>"<++>",<Enter><Tab>publisher<Space>=<Space>"<++>",<Enter><Tab>}<Enter><++><Esc>6kA,<Esc>i
@@ -246,7 +259,7 @@ set encoding=utf-8
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 map <F5> :!w<Enter>:!pdflatex <C-r>%<Enter>
 "Spell-check set to F6
-map <F6> :setlocal spell! spelllang=en_us<CR>
+map <F6> :setlocal spell! spelllang=pt_br<CR>
 map <F10> :Goyo<CR>
 inoremap <F10> <esc>:Goyo<CR>a
 
